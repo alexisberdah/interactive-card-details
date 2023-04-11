@@ -1,0 +1,23 @@
+{
+  "name": "quick-parcel-kun",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "sass src/styles.scss src/styles.css --watch & parcel src/index.html",
+    "build": "sass src/styles.scss src/styles.css & parcel build src/index.html --public-url ./",
+    "prod": "npm run build && cp -R dist/* docs/"
+  },
+  "dependencies": {
+    "assets": "^3.0.1",
+    "parcel-plugin-asset-copier": "^1.1.1",
+    "parcel-plugin-html-root-syntax": "0.0.3",
+    "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "parcel-bundler": "^1.6.1",
+    "sass": "^1.61.0"
+  },
+  "keywords": [],
+  "assetsPath": "assets"
+}
