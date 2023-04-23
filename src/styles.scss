@@ -1,28 +1,208 @@
 @import 'scss/reset';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+$deepViolet: #21092F;
+$blue: #47A2FF;
+$magenta: #D53AFF;
+$orange: #FF834A;
+$lightGrey: #DFDEE0;
+
+$cardWidth: 18rem;
+$cardHeight: 10rem;
+$cardRadius: .375rem;
 
 body {
-  padding: 32px;
+  font-family: 'Space Grotesk';
 }
 
 .hero {
-  height: 100%;
-  background: antiquewhite;
+  height: 95vh;
+  background: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
+  width: 100%;
+
+  .left {
+    width: 100%;
+    min-height: 15rem;
+    background-image: url(../images/bg-main-mobile.png);
+    background-size: cover;
+
+    .cardContainer {
+      height: 15.6875rem;
+      width: 21.4375rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 2rem;
+      border-radius: $cardRadius;
+
+      .card {
+        width: $cardWidth;
+        height: $cardHeight;
+        background-size: cover;
+        position: absolute;
+        border-radius: $cardRadius;
+      }
+
+      .front {
+        background-image: url(../images/bg-card-front.png);
+        bottom: 0;
+        padding: 1.1rem 1.3056rem 1.225rem 1.1875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .circlesContainer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 3.375rem;
+          height: 1.875rem;
+
+          .bigCircle {
+            width: 1.875rem;
+            height: 1.875rem;
+            background-color: white;
+            border-radius: 50%;
+          }
+
+          .smallCircle {
+            border-style: solid;
+            border-color: white;
+            border-width: 1px;
+            border-radius: 50%;
+            width: .8438rem;
+            height: .8438rem;
+          }
+        }
+
+        .cardNumber {
+          margin-top: 1.25rem;
+          color: white;
+          font-size: 1.125rem;
+          letter-spacing: .1375rem;
+        }
+
+        .personInfos {
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          font-size: .5625rem;
+          letter-spacing: .0806rem;
+        }
+      }
+
+      .back {
+        background-image: url(../images/bg-card-back.png);
+        right: 0;
+        top: 1px;
+
+        p {
+          color: white;
+          font-size: .5625rem;
+          letter-spacing: .0806rem;
+          position: absolute;
+          right: 2.0625rem;
+          bottom: 4.75rem;
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .personForm {
+      margin: 5.6875rem 1.5rem 0 1.5rem;
+
+      .field:first-child {
+        margin-top: 0;
+      }
+
+      .field {
+        margin-top: 1.25rem;
+
+        label {
+          color: $deepViolet;
+          font-size: .75rem;
+          letter-spacing: .125rem;
+        }
+
+        input {
+          border-radius: .5rem;
+          border: 1px solid $lightGrey;
+          width: 100%;
+          height: 2.8125rem;
+          margin-top: .5625rem;
+          font-size: 1.125rem;
+          padding-left: 1rem;
+        }
+
+        input:focus {
+          background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, rgb(100, 72, 254), rgb(96, 5, 148)) border-box;
+          border: 1px solid transparent;
+          border-radius: .5rem;
+          padding-left: 1.2rem;
+        }
+
+        input::placeholder {
+          color: $deepViolet;
+          opacity: 0.25;
+        }
+
+        .subFields {
+          display: flex;
+        }
+
+        .subFieldsLeft {
+          width: 50%;
+
+          div {
+            display: flex;
+
+            input:nth-child(odd) {
+              margin-right: .5rem;
+            }
+
+            input:nth-child(even) {
+              margin-right: .6875rem;
+            }
+          }
+        }
+
+        .subFieldsRight {
+          flex: 1;
+        }
+      }
+
+      .submitButton {
+        background-color: $deepViolet;
+        color: white;
+        margin: 1.75rem auto auto auto;
+        height: 3.3125rem;
+        width: 20.4375rem;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
 
   h1 {
     font-size: calc(54vw * 100 / 1440);
     margin-bottom: calc(12vw * 100 / 1440);
   }
-
-  p {
-    font-size: calc(24vw * 100 / 1440);
-  }
 }
 
-a {
-  text-decoration: underline;
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
