@@ -181,7 +181,10 @@ body {
 }
 
 .hero .right .personForm {
+  height: 100%;
+  flex-direction: column;
   margin: 5.6875rem 1.5rem 0;
+  display: flex;
 }
 
 .hero .right .personForm .field:first-child {
@@ -244,14 +247,20 @@ body {
   flex: 1;
 }
 
-.hero .right .personForm .submitButton {
+.hero .right .personForm .submitButtonContainer {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.hero .right .personForm .submitButtonContainer .submitButton {
   color: #fff;
   height: 3.3125rem;
   width: 20.4375rem;
   background-color: #21092f;
   border-radius: .5rem;
   justify-content: center;
-  margin: 1.75rem auto auto;
   display: flex;
 }
 

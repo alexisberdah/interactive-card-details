@@ -117,7 +117,10 @@ body {
     flex-direction: column;
 
     .personForm {
+      display: flex;
+      flex-direction: column;
       margin: 5.6875rem 1.5rem 0 1.5rem;
+      height: 100%;
 
       .field:first-child {
         margin-top: 0;
@@ -179,16 +182,23 @@ body {
         }
       }
 
-      .submitButton {
-        background-color: $deepViolet;
-        color: white;
-        margin: 1.75rem auto auto auto;
-        height: 3.3125rem;
-        width: 20.4375rem;
-        border-radius: .5rem;
+      .submitButtonContainer {
+        flex-grow: 1;
         display: flex;
         justify-content: center;
+        align-items: center;
+
+        .submitButton {
+          background-color: $deepViolet;
+          color: white;
+          height: 3.3125rem;
+          width: 20.4375rem;
+          border-radius: .5rem;
+          display: flex;
+          justify-content: center;
+        }
       }
+
     }
   }
 
