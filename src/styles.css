@@ -277,8 +277,12 @@ body {
 }
 
 .attribution {
-  font-size: 11px;
   text-align: center;
+  font-size: 11px;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .attribution a {
