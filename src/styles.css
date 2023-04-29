@@ -121,7 +121,7 @@ body {
 }
 
 .hero {
-  height: 95vh;
+  height: 100%;
   background: white;
   display: flex;
   flex-direction: column;
@@ -209,25 +209,32 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.hero .right .personForm {
+.hero .right .personFormContainer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-top: 2.625rem;
+  max-width: 24.375rem;
+}
+.hero .right .personFormContainer .personForm {
   display: flex;
   flex-direction: column;
-  margin: 5.6875rem 1.5rem 0 1.5rem;
-  height: 100%;
+  margin: 0 1.5rem 0 1.5rem;
 }
-.hero .right .personForm .field:first-child {
+.hero .right .personFormContainer .personForm .field:first-child {
   margin-top: 0;
 }
-.hero .right .personForm .field {
+.hero .right .personFormContainer .personForm .field {
   margin-top: 1.25rem;
 }
-.hero .right .personForm .field label {
+.hero .right .personFormContainer .personForm .field label {
   color: #21092F;
   font-size: 0.75rem;
   letter-spacing: 0.125rem;
 }
-.hero .right .personForm .field input {
+.hero .right .personFormContainer .personForm .field input {
   border-radius: 0.5rem;
   border: 1px solid #DFDEE0;
   width: 100%;
@@ -236,41 +243,40 @@ body {
   font-size: 1.125rem;
   padding-left: 1rem;
 }
-.hero .right .personForm .field input:focus {
+.hero .right .personFormContainer .personForm .field input:focus {
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, rgb(100, 72, 254), rgb(96, 5, 148)) border-box;
   border: 1px solid transparent;
   border-radius: 0.5rem;
   padding-left: 1.2rem;
 }
-.hero .right .personForm .field input::placeholder {
+.hero .right .personFormContainer .personForm .field input::placeholder {
   color: #21092F;
   opacity: 0.25;
 }
-.hero .right .personForm .field .subFields {
+.hero .right .personFormContainer .personForm .field .subFields {
   display: flex;
 }
-.hero .right .personForm .field .subFieldsLeft {
+.hero .right .personFormContainer .personForm .field .subFieldsLeft {
   width: 50%;
 }
-.hero .right .personForm .field .subFieldsLeft div {
+.hero .right .personFormContainer .personForm .field .subFieldsLeft div {
   display: flex;
 }
-.hero .right .personForm .field .subFieldsLeft div input:nth-child(odd) {
+.hero .right .personFormContainer .personForm .field .subFieldsLeft div input:nth-child(odd) {
   margin-right: 0.5rem;
 }
-.hero .right .personForm .field .subFieldsLeft div input:nth-child(even) {
+.hero .right .personFormContainer .personForm .field .subFieldsLeft div input:nth-child(even) {
   margin-right: 0.6875rem;
 }
-.hero .right .personForm .field .subFieldsRight {
+.hero .right .personFormContainer .personForm .field .subFieldsRight {
   flex: 1;
 }
-.hero .right .personForm .submitButtonContainer {
-  flex-grow: 1;
+.hero .right .personFormContainer .personForm .submitButtonContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 1.75rem;
 }
-.hero .right .personForm .submitButtonContainer .submitButton {
+.hero .right .personFormContainer .personForm .submitButtonContainer .submitButton {
   background-color: #21092F;
   color: white;
   height: 3.3125rem;
@@ -284,10 +290,13 @@ body {
   margin-bottom: 0.8333333333vw;
 }
 
+footer {
+  margin: 10px;
+}
+
 .attribution {
   text-align: center;
   font-size: 11px;
-  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;

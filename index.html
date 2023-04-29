@@ -34,44 +34,47 @@
             </div>
         </div>
         <div class="right">
-            <div class="personForm">
-                <div class="field">
-                    <label for="name">CARDHOLDER NAME</label>
-                    <input type="text" id="name" name="name" placeholder="e.g. Eric Choo" />
-                </div>
-                <div class="field">
-                    <label for="number">CARD NUMBER</label>
-                    <input type="number" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000" />
-                </div>
-                <div class="field">
-                    <div class="subFields">
-                        <div class="subFieldsLeft">
-                            <label for="number">EXP DATE (MM/YY)</label>
-                            <div>
-                                <input type="number" id="month" name="month" placeholder="MM" />
-                                <input type="number" id="year" name="year" placeholder="YY" />
+            <div class="personFormContainer">
+                <div class="personForm">
+                    <div class="field">
+                        <label for="name">CARDHOLDER NAME</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. Eric Choo" />
+                    </div>
+                    <div class="field">
+                        <label for="number">CARD NUMBER</label>
+                        <input type="number" id="number" name="number" placeholder="e.g. 1234 5678 9123 0000" />
+                    </div>
+                    <div class="field">
+                        <div class="subFields">
+                            <div class="subFieldsLeft">
+                                <label for="number">EXP DATE (MM/YY)</label>
+                                <div>
+                                    <input type="number" id="month" name="month" placeholder="MM" />
+                                    <input type="number" id="year" name="year" placeholder="YY" />
+                                </div>
+                            </div>
+                            <div class="subFieldsRight">
+                                <label for="cvc">CVC</label>
+                                <input type="number" id="cvc" name="cvc" placeholder="e.g. 123" />
                             </div>
                         </div>
-                        <div class="subFieldsRight">
-                            <label for="cvc">CVC</label>
-                            <input type="number" id="cvc" name="cvc" placeholder="e.g. 123" />
-                        </div>
                     </div>
-                </div>
-                <div class="submitButtonContainer">
-                    <div class="submitButton">
-                        <button name="submit">Confirm</button>
+                    <div class="submitButtonContainer">
+                        <div class="submitButton">
+                            <button name="submit">Confirm</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="attribution">
+                Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+                    Mentor</a>.
+                Coded by&nbsp;<a href="https://github.com/alexisberdah" target="_blank">Alexis Berdah</a>.
+            </div>
+        </footer>
     </div>
-    <footer>
-        <div class="attribution">
-            Challenge by&nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by&nbsp;<a href="https://github.com/alexisberdah" target="_blank">Alexis Berdah</a>.
-        </div>
-    </footer>
     <script type="module" src="./src/index.js"></script>
 
 </body>
