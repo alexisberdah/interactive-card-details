@@ -70,6 +70,7 @@ function handleSubmit(event) {
 
 function handleInput(event) {
     const type = event.target.name
+    let regex
     let value = event.target.value
     let str
     let newStr
@@ -79,7 +80,7 @@ function handleInput(event) {
         case 'name':
             event.target.value = value.toUpperCase()
             console.log('Alex debug 66')
-            const regex = /^([a-zA-Z' '])+$/
+            regex = /^([a-zA-Z' '])+$/
             const isValid = regex.test(value);
             if (!isValid) {
                 value = value.substring(0, value.length - 1)
@@ -93,7 +94,8 @@ function handleInput(event) {
             break
         case 'number':
             str = '0000000000000000'
-            if (value.length > 16) {
+            regex = /^[1-9]+$/
+            if (value.length > 16 || !regex.test(value)) {
                 value = value.substring(0, value.length - 1)
                 event.target.value = value
             }
