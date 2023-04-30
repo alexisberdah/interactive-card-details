@@ -75,7 +75,7 @@ function handleInput(event) {
         case "number":
             str = "0000000000000000";
             regex = /^[1-9]+$/;
-            if (value.length > 16 || !regex.test(value)) {
+            if (value.length > 16 || value.length > 0 && !regex.test(value)) {
                 value = value.substring(0, value.length - 1);
                 event.target.value = value;
             }
