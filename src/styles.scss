@@ -6,6 +6,8 @@ $blue: #47A2FF;
 $magenta: #D53AFF;
 $orange: #FF834A;
 $lightGrey: #DFDEE0;
+$red: #FF5050;
+$purplishGrey: #8F8694;
 
 $cardWidth: 18rem;
 $cardHeight: 10rem;
@@ -136,6 +138,22 @@ body {
         .field {
           margin-top: 1.25rem;
 
+          .error {
+            position: absolute;
+            font-size: .5625rem;
+            margin-top: .125rem;
+            color: $red;
+            display: none;
+          }
+
+          .sub {
+            transform: translateY(3.375rem);
+          }
+
+          .active {
+            display: block;
+          }
+
           label {
             color: $deepViolet;
             font-size: .75rem;
@@ -150,6 +168,10 @@ body {
             margin-top: .5625rem;
             font-size: 1.125rem;
             padding-left: 1rem;
+          }
+
+          .errorInput {
+            border-color: $red;
           }
 
           input:focus {
@@ -188,23 +210,59 @@ body {
             flex: 1;
           }
         }
+      }
+    }
 
-        .submitButtonContainer {
-          display: flex;
-          justify-content: center;
-          margin-top: 1.75rem;
+    .validationScreen {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.625rem;
 
-          .submitButton {
-            background-color: $deepViolet;
-            color: white;
-            height: 3.3125rem;
-            width: 20.4375rem;
-            border-radius: .5rem;
-            display: flex;
-            justify-content: center;
-          }
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      h1 {
+        font-size: 1.8125rem;
+        letter-spacing: .2137rem;
+        margin-top: 2.1875rem;
+        color: $deepViolet;
+      }
+
+      h3 {
+        font-size: 1.125rem;
+        color: $purplishGrey;
+        margin-top: 1rem;
+      }
+
+      .submitButtonContainer {
+        margin-top: 3rem;
+      }
+    }
+
+    .submitButtonContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.75rem;
+
+      .submitButton {
+        background-color: $deepViolet;
+        color: white;
+        height: 3.3125rem;
+        width: 20.4375rem;
+        border-radius: .5rem;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+
+        button {
+          width: 100%;
         }
-
       }
     }
   }

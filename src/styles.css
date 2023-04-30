@@ -229,6 +229,19 @@ body {
 .hero .right .personFormContainer .personForm .field {
   margin-top: 1.25rem;
 }
+.hero .right .personFormContainer .personForm .field .error {
+  position: absolute;
+  font-size: 0.5625rem;
+  margin-top: 0.125rem;
+  color: #FF5050;
+  display: none;
+}
+.hero .right .personFormContainer .personForm .field .sub {
+  transform: translateY(3.375rem);
+}
+.hero .right .personFormContainer .personForm .field .active {
+  display: block;
+}
 .hero .right .personFormContainer .personForm .field label {
   color: #21092F;
   font-size: 0.75rem;
@@ -242,6 +255,9 @@ body {
   margin-top: 0.5625rem;
   font-size: 1.125rem;
   padding-left: 1rem;
+}
+.hero .right .personFormContainer .personForm .field .errorInput {
+  border-color: #FF5050;
 }
 .hero .right .personFormContainer .personForm .field input:focus {
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, rgb(100, 72, 254), rgb(96, 5, 148)) border-box;
@@ -271,12 +287,39 @@ body {
 .hero .right .personFormContainer .personForm .field .subFieldsRight {
   flex: 1;
 }
-.hero .right .personFormContainer .personForm .submitButtonContainer {
+.hero .right .validationScreen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.625rem;
+}
+.hero .right .validationScreen img {
+  width: 5rem;
+  height: 5rem;
+}
+.hero .right .validationScreen h1 {
+  font-size: 1.8125rem;
+  letter-spacing: 0.2137rem;
+  margin-top: 2.1875rem;
+  color: #21092F;
+}
+.hero .right .validationScreen h3 {
+  font-size: 1.125rem;
+  color: #8F8694;
+  margin-top: 1rem;
+}
+.hero .right .validationScreen .submitButtonContainer {
+  margin-top: 3rem;
+}
+.hero .right .submitButtonContainer {
   display: flex;
   justify-content: center;
   margin-top: 1.75rem;
 }
-.hero .right .personFormContainer .personForm .submitButtonContainer .submitButton {
+.hero .right .submitButtonContainer .submitButton {
   background-color: #21092F;
   color: white;
   height: 3.3125rem;
@@ -284,6 +327,10 @@ body {
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;
+  cursor: pointer;
+}
+.hero .right .submitButtonContainer .submitButton button {
+  width: 100%;
 }
 .hero h1 {
   font-size: 3.75vw;

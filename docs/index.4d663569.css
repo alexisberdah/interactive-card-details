@@ -203,6 +203,22 @@ body {
   margin-top: 1.25rem;
 }
 
+.hero .right .personFormContainer .personForm .field .error {
+  color: #ff5050;
+  margin-top: .125rem;
+  font-size: .5625rem;
+  display: none;
+  position: absolute;
+}
+
+.hero .right .personFormContainer .personForm .field .sub {
+  transform: translateY(3.375rem);
+}
+
+.hero .right .personFormContainer .personForm .field .active {
+  display: block;
+}
+
 .hero .right .personFormContainer .personForm .field label {
   color: #21092f;
   letter-spacing: .125rem;
@@ -217,6 +233,10 @@ body {
   margin-top: .5625rem;
   padding-left: 1rem;
   font-size: 1.125rem;
+}
+
+.hero .right .personFormContainer .personForm .field .errorInput {
+  border-color: #ff5050;
 }
 
 .hero .right .personFormContainer .personForm .field input:focus {
@@ -255,20 +275,57 @@ body {
   flex: 1;
 }
 
-.hero .right .personFormContainer .personForm .submitButtonContainer {
+.hero .right .validationScreen {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.625rem;
+  display: flex;
+}
+
+.hero .right .validationScreen img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.hero .right .validationScreen h1 {
+  letter-spacing: .2137rem;
+  color: #21092f;
+  margin-top: 2.1875rem;
+  font-size: 1.8125rem;
+}
+
+.hero .right .validationScreen h3 {
+  color: #8f8694;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+.hero .right .validationScreen .submitButtonContainer {
+  margin-top: 3rem;
+}
+
+.hero .right .submitButtonContainer {
   justify-content: center;
   margin-top: 1.75rem;
   display: flex;
 }
 
-.hero .right .personFormContainer .personForm .submitButtonContainer .submitButton {
+.hero .right .submitButtonContainer .submitButton {
   color: #fff;
   height: 3.3125rem;
   width: 20.4375rem;
+  cursor: pointer;
   background-color: #21092f;
   border-radius: .5rem;
   justify-content: center;
   display: flex;
+}
+
+.hero .right .submitButtonContainer .submitButton button {
+  width: 100%;
 }
 
 .hero h1 {
